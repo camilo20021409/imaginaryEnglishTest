@@ -1,44 +1,88 @@
 package com.example.imaginaryenglishtest;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PrincipalController {
     @FXML
+    Button btnScene1, botonNivel1, botonNivel2, botonNivel3;
+
+    @FXML
     private TextField campoNombre;
 
     @FXML
     private TextField campoEdad;
 
-    @FXML
-    private TextField nivelJuego;
-
-    @FXML
-    Button btnScene1;
-
-    public PrincipalController(){
-
+    public String getNombre() {
+        return nombre;
     }
 
+    public String getEdad() {
+        return edad;
+    }
 
+    public Integer getNivel() {
+        return nivel;
+    }
+
+    String nombre;
+    String edad;
+    Integer nivel;
+    String pantalla;
+
+
+
+    @FXML
     public void handleBtn1() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("views/PartidaLvL1.fxml"));
+
+        nombre = campoNombre.getText();
+        edad = campoEdad.getText();
+        pantalla = "";
+
+        switch (nivel){
+            case 1:
+                pantalla = "views/PartidaLvL1.fxml";
+                break;
+            case 2:
+                pantalla = "views/PartidaLvL2.fxml";
+                break;
+            case 3:
+                pantalla = "views/PartidaLvL3.fxml";
+                break;
+        }
+
+        Parent root = FXMLLoader.load(getClass().getResource(pantalla));
         Stage window = (Stage) btnScene1.getScene().getWindow();
         window.setScene(new Scene(root, 700,500));
 
-        System.out.println("Nombre, " + this.campoNombre.getText());
-        System.out.println("Edad, " + this.campoEdad.getText());
-        System.out.println("Nivel, " + this.campoEdad.getText());
 
-
+        System.out.println("Nombre, " + nombre);
+        System.out.println("Edad, " + edad);
+        System.out.println("Nivel, " + nivel);
+        System.out.println(pantalla);
     }
+
+    public void textoBotonNivel1(){
+        nivel = 1;
+    }
+
+    public void textoBotonNivel2(){
+        nivel = 2;
+    }
+
+    public void textoBotonNivel3(){
+        nivel = 3;
+    }
+
+
+
 
 
 }
