@@ -24,12 +24,29 @@ public class PrincipalController {
     Integer nivel;
     String pantalla;
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
 
     @FXML
     public void handleBtn1() throws IOException {
 
-        nombre = campoNombre.getText();
-        edad = campoEdad.getText();
+        setNombre(campoNombre.getText());
+        setEdad(campoEdad.getText());
+
         pantalla = "";
 
         switch (nivel){

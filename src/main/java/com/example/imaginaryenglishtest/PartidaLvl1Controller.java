@@ -6,16 +6,18 @@ import javafx.scene.control.Label;
 
 import java.util.HashMap;
 
-public class PartidaLvl1Controller {
+public class PartidaLvl1Controller{
     @FXML
     private Button boton1, boton2;
 
     @FXML
-    Label nombreUsuario;
+    Label labelNombreUsuario;
 
-    PrincipalController principalController;
+     Integer seleccion;
 
-    private Integer seleccion;
+     String nombreUsuario;
+
+
 
 
     public void accionBoton1(){
