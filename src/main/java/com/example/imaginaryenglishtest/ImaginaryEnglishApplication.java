@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ImaginaryEnglishApplication extends Application {
@@ -19,7 +20,10 @@ public class ImaginaryEnglishApplication extends Application {
     }
 
     public static void main(String[] args) { launch();
-
+        for (int i = 0; i < DataList.dataList.size(); i++) {
+            DataList.DataItem item = DataList.dataList.get(i);
+            System.out.println((i + 1) + ". " + item.getName() + " - " + item.getPath());
+        }
 
 
     }

@@ -9,9 +9,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imaginaryenglishtest.PartidaLvl1Controller">
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imaginaryenglishtest.PartidaLvl1Controller">
    <children>
-       
       <Circle centerX="10.0" centerY="40.0" fill="#d9d9d9" layoutX="442.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle centerX="10.0" centerY="40.0" fill="DODGERBLUE" layoutX="372.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle centerX="10.0" centerY="40.0" fill="#d9d9d9" layoutX="510.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
@@ -35,31 +34,26 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="162.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signo1" fitHeight="115.0" fitWidth="116.0" layoutX="162.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="12.0" fitWidth="17.0" layoutX="152.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/corazon.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="300.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signo2" fitHeight="115.0" fitWidth="116.0" layoutX="307.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
       </ImageView>
       <Label layoutX="237.0" layoutY="327.0" prefHeight="30.0" prefWidth="116.0" text="Selecciona un:" />
-
-      <Button fx:id="boton1" layoutX="194.0" layoutY="293.0" mnemonicParsing="false" text="Button" onAction="#accionBoton1" />
-      <Button fx:id="boton2" layoutX="332.0" layoutY="296.0" mnemonicParsing="false" text="Button" onAction="#accionBoton2" />
-
-
-      <Text layoutX="266.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="166.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="154.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-
-
+      <Button fx:id="boton1" layoutX="194.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton1" text="Button" />
+      <Button fx:id="boton2" layoutX="338.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton2" text="Button" />
+      <Text fx:id="TexImage" layoutX="266.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="textNombre" layoutX="166.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text fx:id="textPuntos" layoutX="154.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="136.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/corazon.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
