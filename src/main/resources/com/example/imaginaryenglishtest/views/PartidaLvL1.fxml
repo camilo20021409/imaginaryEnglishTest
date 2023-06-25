@@ -57,8 +57,11 @@
 
 
       <Text layoutX="266.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-      <Text layoutX="154.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+
+
       <Label fx:id="labelNombreUsuario" layoutX="162.0" layoutY="69.0" text="Label" />
+      <Label fx:id="labelContadorVidas" layoutX="176.0" layoutY="92.0" text="Label" />
+      <Label fx:id="labelContadorPuntos" layoutX="151.0" layoutY="114.0" text="Label" />
 
 
    </children>

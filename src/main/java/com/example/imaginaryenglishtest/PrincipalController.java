@@ -20,7 +20,7 @@ public class PrincipalController {
     @FXML
     private TextField campoEdad;
 
-    public String nombre;
+    public static String nombre;
     public String edad;
     public Integer nivel;
     public String pantalla;
@@ -77,7 +77,6 @@ public class PrincipalController {
 
     public void textoBotonNivel1(){
         nivel = 1;
-        System.out.println("desde el nivel " + nombre  );
     }
 
     public void textoBotonNivel2(){
@@ -88,9 +87,6 @@ public class PrincipalController {
         nivel = 3;
     }
 
-    public void asignarNombre(){
-        nombre = campoNombre.getText();
-    }
 
 
 
