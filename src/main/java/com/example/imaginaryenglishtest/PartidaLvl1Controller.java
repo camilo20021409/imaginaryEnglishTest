@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 
 import java.util.HashMap;
 
-public class PartidaLvl1Controller{
+public class PartidaLvl1Controller extends PrincipalController{
     @FXML
     private Button boton1, boton2;
 
@@ -15,7 +15,8 @@ public class PartidaLvl1Controller{
 
      Integer seleccion;
 
-     String nombreUsuario;
+     String nombreUsuario = nombre;
+
 
 
 
@@ -23,6 +24,7 @@ public class PartidaLvl1Controller{
     public void accionBoton1(){
         seleccion = 1;
         System.out.println("Seleccion " + seleccion );
+        System.out.println(nombreUsuario);
 
     }
 
