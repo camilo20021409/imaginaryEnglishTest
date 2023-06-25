@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PrincipalController {
+
     @FXML
     Button btnScene1, botonNivel1, botonNivel2, botonNivel3;
 
@@ -19,17 +20,19 @@ public class PrincipalController {
     @FXML
     private TextField campoEdad;
 
-    String nombre;
-    String edad;
-    Integer nivel;
-    String pantalla;
+    public static String nombre;
+    public String edad;
+    public Integer nivel;
+    public String pantalla;
+
+
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setEdad(String edad) {
-        this.edad = edad;
+    public void setEdad(String campoEdad) {
+        this.edad = campoEdad;
     }
 
     public String getNombre() {
@@ -83,6 +86,7 @@ public class PrincipalController {
     public void textoBotonNivel3(){
         nivel = 3;
     }
+
 
 
 
