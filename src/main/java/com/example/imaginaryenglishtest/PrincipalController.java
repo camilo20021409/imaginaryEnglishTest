@@ -1,6 +1,5 @@
 package com.example.imaginaryenglishtest;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,6 +19,19 @@ public class PrincipalController {
     @FXML
     private TextField campoEdad;
 
+    String nombre;
+    String edad;
+    Integer nivel;
+    String pantalla;
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -28,22 +40,13 @@ public class PrincipalController {
         return edad;
     }
 
-    public Integer getNivel() {
-        return nivel;
-    }
-
-    String nombre;
-    String edad;
-    Integer nivel;
-    String pantalla;
-
-
 
     @FXML
     public void handleBtn1() throws IOException {
 
-        nombre = campoNombre.getText();
-        edad = campoEdad.getText();
+        setNombre(campoNombre.getText());
+        setEdad(campoEdad.getText());
+
         pantalla = "";
 
         switch (nivel){
@@ -80,6 +83,8 @@ public class PrincipalController {
     public void textoBotonNivel3(){
         nivel = 3;
     }
+
+
 
 
 
