@@ -1,18 +1,24 @@
 package com.example.imaginaryenglishtest;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
 import static com.example.imaginaryenglishtest.PrincipalController.nombre;
 
 public class PartidaLvl1Controller {
+
     @FXML
     private Text TexImage;
     @FXML
@@ -22,10 +28,10 @@ public class PartidaLvl1Controller {
     private ImageView signo2;
 
     @FXML
-    private Button boton1;
+    Button boton1;
 
     @FXML
-    private Button boton2;
+    Button boton2;
 
     @FXML
     private Text text1;
@@ -49,11 +55,11 @@ public class PartidaLvl1Controller {
 
     public void initialize() {
 
-        int number1 = random.nextInt(30) + 1;
+        int number1 = random.nextInt(29) + 1;
         int number2;
 
         do {
-            number2 = random.nextInt(30) + 1;
+            number2 = random.nextInt(29) + 1;
         } while (number2 == number1);
 
         ArrayList<DataList.DataItem> dataList = DataList.dataList;
@@ -90,18 +96,31 @@ public class PartidaLvl1Controller {
         labelNombreUsuario.setText(nombreUsuario);
         labelContadorVidas.setText(String.valueOf(vidas));
         labelContadorPuntos.setText(String.valueOf(puntos));
+        boton1.setOnAction(event -> {
+            try {
+                accionBoton1();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        boton2.setOnAction(event -> {
+            accionBoton2();
+        });
     }
 
-    public void accionBoton1() {
+    public void accionBoton1() throws IOException {
         seleccion = 1;
         System.out.println("Seleccion " + seleccion);
-        System.out.println("Seleccion " + seleccion );
         if (seleccion == condicion) {
             System.out.println("Correcto");
+            puntos += 1;
         } else {
             System.out.println("Incorrecto");
         }
 
+        // Volver a cargar y actualizar la pantalla
+        initialize();
+        condicion = random.nextInt(2) + 1;
     }
 
     public void accionBoton2() {
@@ -109,10 +128,16 @@ public class PartidaLvl1Controller {
         System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
             System.out.println("Correcto");
+            puntos += 1;
         } else {
             System.out.println("Incorrecto");
         }
+
+        // Volver a cargar y actualizar la pantalla
+        initialize();
+        condicion = random.nextInt(2) + 1;
     }
+
     public void setTexImageText(String text) {
         TexImage.setText(text);
     }
