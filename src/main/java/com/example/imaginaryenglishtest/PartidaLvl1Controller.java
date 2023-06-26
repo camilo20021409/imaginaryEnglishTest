@@ -53,7 +53,7 @@ public class PartidaLvl1Controller {
 
     PrincipalController controller = new PrincipalController();
 
-    public void initialize() {
+    public void initialize() throws IOException {
 
         int number1 = random.nextInt(30) + 1;
         int number2;
@@ -104,8 +104,15 @@ public class PartidaLvl1Controller {
             }
         });
         boton2.setOnAction(event -> {
-            accionBoton2();
+            try {
+                accionBoton2();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         });
+
+
+
     }
 
     public void accionBoton1() throws IOException {
@@ -119,12 +126,18 @@ public class PartidaLvl1Controller {
             vidas -= 1;
         }
 
-        // Volver a cargar y actualizar la pantalla
-        initialize();
-        condicion = random.nextInt(2) + 1;
-    }
+            // Volver a cargar y actualizar la pantalla
+            initialize();
+            condicion = random.nextInt(2) + 1;
 
-    public void accionBoton2() {
+            if(vidas == 0){
+                cargarPantallaDerrota();
+            }
+        }
+
+
+
+    public void accionBoton2 () throws IOException{
         seleccion = 2;
         System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
@@ -132,17 +145,33 @@ public class PartidaLvl1Controller {
             puntos += 1;
         } else {
             System.out.println("Incorrecto");
+            vidas -= 1;
         }
 
         // Volver a cargar y actualizar la pantalla
         initialize();
         condicion = random.nextInt(2) + 1;
+
+        if(vidas == 0){
+            cargarPantallaDerrota();
+        }
+
     }
 
     public void setTexImageText(String text) {
         TexImage.setText(text);
     }
 
+    //CARGAR PANTALLA DERROTA
+    private void cargarPantallaDerrota() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/PantallaDerrota.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) boton1.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 
