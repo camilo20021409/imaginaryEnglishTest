@@ -49,11 +49,12 @@ public class PartidaLvl1Controller {
 
     Integer puntos = 0;
     Random random = new Random();
-    int condicion = random.nextInt(2) + 1;
+    int condicion;
 
     PrincipalController controller = new PrincipalController();
 
     public void initialize() throws IOException {
+        condicion = random.nextInt(2) + 1;
 
         int number1 = random.nextInt(30) + 1;
         int number2;
@@ -135,8 +136,8 @@ public class PartidaLvl1Controller {
         } else {
             // Volver a cargar y actualizar la pantalla
             initialize();
-            condicion = random.nextInt(2) + 1;
         }
+        System.out.println(condicion);
     }
 
 
@@ -161,7 +162,6 @@ public class PartidaLvl1Controller {
         else {
             // Volver a cargar y actualizar la pantalla
             initialize();
-            condicion = random.nextInt(2) + 1;
         }
 
     }
