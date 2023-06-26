@@ -116,6 +116,7 @@ public class PartidaLvl1Controller {
             puntos += 1;
         } else {
             System.out.println("Incorrecto");
+            vidas -= 1;
         }
 
         // Volver a cargar y actualizar la pantalla
