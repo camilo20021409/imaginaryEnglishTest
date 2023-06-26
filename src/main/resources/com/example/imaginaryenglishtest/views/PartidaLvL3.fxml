@@ -7,10 +7,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imaginaryenglishtest.PartidaLvl3Controller">
    <children>
-       
+
       <Circle centerX="10.0" centerY="40.0" fill="DODGERBLUE" layoutX="442.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle centerX="10.0" centerY="40.0" fill="DODGERBLUE" layoutX="372.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle centerX="10.0" centerY="40.0" fill="DODGERBLUE" layoutX="510.0" layoutY="60.0" radius="30.0" stroke="BLACK" strokeType="INSIDE" />
@@ -34,7 +35,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="38.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signo1" fitHeight="115.0" fitWidth="116.0" layoutX="38.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
@@ -44,35 +45,39 @@
             <Image url="@../images/corazon.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="176.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signo2" fitHeight="115.0" fitWidth="116.0" layoutX="176.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
       </ImageView>
       <Label layoutX="237.0" layoutY="327.0" prefHeight="30.0" prefWidth="116.0" text="Selecciona un:" />
-      <Button layoutX="70.0" layoutY="298.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="208.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="321.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="boton1" layoutX="70.0" layoutY="298.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="boton2" layoutX="208.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
+      <ImageView fx:id="signo3" fitHeight="115.0" fitWidth="116.0" layoutX="321.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="353.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="boton3" layoutX="353.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
       <Label layoutX="374.0" layoutY="77.0" text="1">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <ImageView fitHeight="115.0" fitWidth="116.0" layoutX="463.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="signo4" fitHeight="115.0" fitWidth="116.0" layoutX="463.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/signo.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="503.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
+      <Button fx:id="boton4" layoutX="503.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
       <Label layoutX="512.0" layoutY="77.0" text="3">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
+      <Label fx:id="labelNombreUsuario" layoutX="162.0" layoutY="68.0" text="Label" />
+      <Label fx:id="labelContadorVidas" layoutX="176.0" layoutY="91.0" text="Label" />
+      <Label fx:id="labelContadorPuntos" layoutX="162.0" layoutY="114.0" text="Label" />
+      <Text fx:id="TexImage" layoutX="276.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </AnchorPane>
