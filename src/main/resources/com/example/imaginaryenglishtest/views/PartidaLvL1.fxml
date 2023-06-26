@@ -45,8 +45,8 @@
          </image>
       </ImageView>
       <Label layoutX="230.0" layoutY="326.0" prefHeight="30.0" prefWidth="116.0" text="Selecciona un:" />
-      <Button fx:id="boton1" layoutX="194.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton1" text="Button" />
-      <Button fx:id="boton2" layoutX="338.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton2" text="Button" />
+      <Button fx:id="boton1" layoutX="194.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton1" text="Seleccionar" />
+      <Button fx:id="boton2" layoutX="338.0" layoutY="293.0" mnemonicParsing="false" onAction="#accionBoton2" text="Seleccionar" />
       <Text fx:id="TexImage" layoutX="266.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
        <Label fx:id="labelNombreUsuario" layoutX="162.0" layoutY="69.0" text="Label" />
        <Label fx:id="labelContadorVidas" layoutX="176.0" layoutY="92.0" text="Label" />
