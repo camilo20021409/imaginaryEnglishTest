@@ -127,14 +127,17 @@ public class PartidaLvl1Controller {
         }
 
         //CHEQUEA LAS VIDA Y CARGA PANTALLA DERROTA
-        if(vidas == 0){
+        if(vidas <= 0){
             cargarPantallaDerrota();
+        } else if (puntos >10){
+            cargarPantallaVictoria();
+
         } else {
             // Volver a cargar y actualizar la pantalla
             initialize();
             condicion = random.nextInt(2) + 1;
         }
-        }
+    }
 
 
 
@@ -150,9 +153,12 @@ public class PartidaLvl1Controller {
         }
 
         //CHEQUEA LAS VIDA Y CARGA PANTALLA DERROTA
-        if(vidas == 0){
+        if(vidas <= 0){
             cargarPantallaDerrota();
-        } else {
+        } else if (puntos >10){
+            cargarPantallaVictoria();
+        }
+        else {
             // Volver a cargar y actualizar la pantalla
             initialize();
             condicion = random.nextInt(2) + 1;
@@ -164,9 +170,19 @@ public class PartidaLvl1Controller {
         TexImage.setText(text);
     }
 
-    //CARGAR PANTALLA DERROTA
+    //CARGAR PANTALLA DERROTA Y VICTORIA
     private void cargarPantallaDerrota() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("views/PantallaDerrota.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage stage = (Stage) boton1.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private void cargarPantallaVictoria() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/PantallaVictoriafxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
