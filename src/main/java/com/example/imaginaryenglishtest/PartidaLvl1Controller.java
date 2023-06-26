@@ -126,13 +126,14 @@ public class PartidaLvl1Controller {
             vidas -= 1;
         }
 
+        //CHEQUEA LAS VIDA Y CARGA PANTALLA DERROTA
+        if(vidas == 0){
+            cargarPantallaDerrota();
+        } else {
             // Volver a cargar y actualizar la pantalla
             initialize();
             condicion = random.nextInt(2) + 1;
-
-            if(vidas == 0){
-                cargarPantallaDerrota();
-            }
+        }
         }
 
 
@@ -148,12 +149,13 @@ public class PartidaLvl1Controller {
             vidas -= 1;
         }
 
-        // Volver a cargar y actualizar la pantalla
-        initialize();
-        condicion = random.nextInt(2) + 1;
-
+        //CHEQUEA LAS VIDA Y CARGA PANTALLA DERROTA
         if(vidas == 0){
             cargarPantallaDerrota();
+        } else {
+            // Volver a cargar y actualizar la pantalla
+            initialize();
+            condicion = random.nextInt(2) + 1;
         }
 
     }
