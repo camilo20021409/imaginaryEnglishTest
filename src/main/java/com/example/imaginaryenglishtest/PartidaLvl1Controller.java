@@ -55,11 +55,11 @@ public class PartidaLvl1Controller {
 
     public void initialize() {
 
-        int number1 = random.nextInt(29) + 1;
+        int number1 = random.nextInt(30) + 1;
         int number2;
 
         do {
-            number2 = random.nextInt(29) + 1;
+            number2 = random.nextInt(30) + 1;
         } while (number2 == number1);
 
         ArrayList<DataList.DataItem> dataList = DataList.dataList;
