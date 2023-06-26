@@ -45,7 +45,7 @@ public class PartidaLvl1Controller {
 
     String nombreUsuario = nombre;
 
-    Integer vidas = 100;
+    Integer vidas = 3;
 
     Integer puntos = 0;
     Random random = new Random();
