@@ -45,7 +45,7 @@ public class PartidaLvl1Controller {
 
     String nombreUsuario = nombre;
 
-    Integer vidas = 3;
+    Integer vidas = 100;
 
     Integer puntos = 0;
     Random random = new Random();
@@ -182,7 +182,7 @@ public class PartidaLvl1Controller {
     }
 
     private void cargarPantallaVictoria() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/PantallaVictoriafxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/PantallaVictoria.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
