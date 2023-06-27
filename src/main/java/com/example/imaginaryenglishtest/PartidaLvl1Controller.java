@@ -67,23 +67,14 @@ public class PartidaLvl1Controller {
         String name2 = dataItem2.getName();
         String path2 = dataItem2.getPath();
 
-        System.out.println("Primer número: " + number1);
-        System.out.println("Nombre 1: " + name1);
-        System.out.println("Path 1: " + path1);
-
-        System.out.println("\nSegundo número: " + number2);
-        System.out.println("Nombre 2: " + name2);
-        System.out.println("Path 2: " + path2);
         if (condicion == 1) {
             setTexImageText(name1);
         } else if (condicion == 2) {
             setTexImageText(name2);
         }
 
-
         Image signo1Image = new Image(getClass().getResourceAsStream(path1));
         Image signo2Image = new Image(getClass().getResourceAsStream(path2));
-
 
         // Establecer las imágenes en los ImageView
         signo1.setImage(signo1Image);
@@ -112,7 +103,6 @@ public class PartidaLvl1Controller {
 
     public void accionBoton1() throws IOException {
         seleccion = 1;
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
             puntos += 1;
         } else {
@@ -135,7 +125,6 @@ public class PartidaLvl1Controller {
 
     public void accionBoton2 () throws IOException{
         seleccion = 2;
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
             System.out.println("Correcto");
             puntos += 1;
