@@ -91,19 +91,6 @@ public class PartidaLvl2Controller {
         DataList.DataItem dataItem3 = dataList.get(number3 - 1);
         String name3 = dataItem3.getName();
         String path3 = dataItem3.getPath();
-
-        System.out.println("Primer número: " + number1);
-        System.out.println("Nombre 1: " + name1);
-        System.out.println("Path 1: " + path1);
-
-        System.out.println("\nSegundo número: " + number2);
-        System.out.println("Nombre 2: " + name2);
-        System.out.println("Path 2: " + path2);
-
-        System.out.println("\nTercer número: " + number3);
-        System.out.println("Nombre 3: " + name3);
-        System.out.println("Path 3: " + path3);
-
         if (condicion == 1) {
             setTexImageText(name1);
         } else if (condicion == 2) {
@@ -123,7 +110,6 @@ public class PartidaLvl2Controller {
         labelNombreUsuario.setText(nombreUsuario);
         labelContadorVidas.setText(String.valueOf(vidas));
         labelContadorPuntos.setText(String.valueOf(puntos));
-
         boton1.setOnAction(event -> {
             try {
                 accionBoton1();
@@ -151,12 +137,9 @@ public class PartidaLvl2Controller {
 
     public void accionBoton1() throws IOException {
         seleccion = 1;
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
-            System.out.println("Correcto");
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 
@@ -173,12 +156,9 @@ public class PartidaLvl2Controller {
 
     public void accionBoton2() throws IOException {
         seleccion = 2;
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
-            System.out.println("Correcto");
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 
@@ -195,12 +175,9 @@ public class PartidaLvl2Controller {
 
     public void accionBoton3() throws IOException {
         seleccion = 3;
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
-            System.out.println("Correcto");
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 

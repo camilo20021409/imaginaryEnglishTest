@@ -18,7 +18,6 @@ public class PrincipalController {
     private TextField campoNombre;
 
     @FXML
-    private TextField campoEdad;
 
     public static String nombre;
     public String edad;
@@ -67,12 +66,6 @@ public class PrincipalController {
         Parent root = FXMLLoader.load(getClass().getResource(pantalla));
         Stage window = (Stage) btnScene1.getScene().getWindow();
         window.setScene(new Scene(root, 700,500));
-
-
-        System.out.println("Nombre, " + nombre);
-        System.out.println("Edad, " + edad);
-        System.out.println("Nivel, " + nivel);
-        System.out.println(pantalla);
     }
 
     public void textoBotonNivel1(){
@@ -86,14 +79,6 @@ public class PrincipalController {
     public void textoBotonNivel3(){
         nivel = 3;
     }
-
-
-
-
-
-
-
-
 }
 
 
