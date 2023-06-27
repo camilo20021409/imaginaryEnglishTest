@@ -33,12 +33,6 @@ public class PartidaLvl1Controller {
     @FXML
     Button boton2;
 
-    @FXML
-    private Text text1;
-
-    @FXML
-    private Text text2;
-
     private Integer seleccion;
     @FXML
     private Label labelNombreUsuario, labelContadorVidas, labelContadorPuntos;

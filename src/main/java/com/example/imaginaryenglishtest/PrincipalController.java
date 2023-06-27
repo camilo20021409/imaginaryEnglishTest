@@ -48,7 +48,7 @@ public class PrincipalController {
     public void handleBtn1() throws IOException {
 
         setNombre(campoNombre.getText());
-        
+
 
         pantalla = "";
 

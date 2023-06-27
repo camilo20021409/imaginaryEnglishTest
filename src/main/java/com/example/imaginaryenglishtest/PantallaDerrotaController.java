@@ -15,7 +15,7 @@ public class PantallaDerrotaController {
 
     @FXML
     private void cargarPantallaInicio() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/Principal.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("views/principal.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
