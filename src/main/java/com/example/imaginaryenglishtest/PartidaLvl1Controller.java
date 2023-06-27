@@ -128,7 +128,6 @@ public class PartidaLvl1Controller {
         if (seleccion == condicion) {
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 
