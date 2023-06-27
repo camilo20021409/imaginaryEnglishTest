@@ -90,21 +90,6 @@ public class PartidaLvl3Controller {
         String name4 = dataItem4.getName();
         String path4 = dataItem4.getPath();
 
-        System.out.println("Primer número: " + number1);
-        System.out.println("Nombre 1: " + name1);
-        System.out.println("Path 1: " + path1);
-
-        System.out.println("\nSegundo número: " + number2);
-        System.out.println("Nombre 2: " + name2);
-        System.out.println("Path 2: " + path2);
-
-        System.out.println("\nTercer número: " + number3);
-        System.out.println("Nombre 3: " + name3);
-        System.out.println("Path 3: " + path3);
-
-        System.out.println("\nCuarto número: " + number4);
-        System.out.println("Nombre 4: " + name4);
-        System.out.println("Path 4: " + path4);
 
         if (condicion == 1) {
             setTexImageText(name1);
@@ -160,12 +145,9 @@ public class PartidaLvl3Controller {
     }
 
     public void accionBoton(int seleccion) throws IOException {
-        System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
-            System.out.println("Correcto");
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 
@@ -178,7 +160,6 @@ public class PartidaLvl3Controller {
             // Volver a cargar y actualizar la pantalla
             initialize();
         }
-        System.out.println(condicion);
     }
 
     public void setTexImageText(String text) {
