@@ -120,10 +120,8 @@ public class PartidaLvl1Controller {
         seleccion = 1;
         System.out.println("Seleccion " + seleccion);
         if (seleccion == condicion) {
-            System.out.println("Correcto");
             puntos += 1;
         } else {
-            System.out.println("Incorrecto");
             vidas -= 1;
         }
 
@@ -137,7 +135,6 @@ public class PartidaLvl1Controller {
             // Volver a cargar y actualizar la pantalla
             initialize();
         }
-        System.out.println(condicion);
     }
 
 

@@ -10,13 +10,12 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imaginaryenglishtest.PrincipalController">
 
    <children>
-      <TextField fx:id="campoNombre" layoutX="135.0" layoutY="188.0" promptText="Nombre" />
-      <TextField fx:id="campoEdad" layoutX="326.0" layoutY="188.0" promptText="Edad" />
+      <TextField fx:id="campoNombre" alignment="TOP_CENTER" layoutX="222.0" layoutY="187.0" promptText="Nombre" />
       <Button fx:id="btnScene1" layoutX="210.0" layoutY="335.0" mnemonicParsing="false" onAction="#handleBtn1" prefHeight="26.0" prefWidth="179.0" text="Iniciar juego" />
 
-      <Button fx:id="botonNivel1" layoutX="186.0" layoutY="290.0" mnemonicParsing="false" text="1" onAction="#textoBotonNivel1"/>
-      <Button fx:id="botonNivel2" layoutX="283.0" layoutY="290.0" mnemonicParsing="false" text="2" onAction="#textoBotonNivel2"/>
-      <Button fx:id="botonNivel3" layoutX="371.0" layoutY="290.0" mnemonicParsing="false" text="3" onAction="#textoBotonNivel3"/>
+      <Button fx:id="botonNivel1" layoutX="186.0" layoutY="290.0" mnemonicParsing="false" onAction="#textoBotonNivel1" text="1" />
+      <Button fx:id="botonNivel2" layoutX="283.0" layoutY="290.0" mnemonicParsing="false" onAction="#textoBotonNivel2" text="2" />
+      <Button fx:id="botonNivel3" layoutX="371.0" layoutY="290.0" mnemonicParsing="false" onAction="#textoBotonNivel3" text="3" />
 
       <Label layoutX="249.0" layoutY="247.0" prefHeight="9.0" prefWidth="96.0" text="Selecione el nivel" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
       <ImageView fitHeight="138.0" fitWidth="138.0" layoutX="231.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
